@@ -1,0 +1,10 @@
+githubviewer.settings:
+ type: config_object
+ label: 'GithubViewer Settings'
+ mapping:
+   github_credentials_user:
+     type: text
+     label: 'Github User'
+    github_credentials_password:
+     type: text
+     label: 'Github Password'

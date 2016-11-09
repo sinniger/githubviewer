@@ -1,0 +1,6 @@
+githubviewer.githubviewer_admin_form:
+ title: 'Github Viewer Configuration'
+ description: 'Guthub user credentials'
+ parent: system.admin_config_development
+ route_name: githubviewer.githubviewer_admin_form
+ weight: 10

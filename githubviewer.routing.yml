@@ -1,0 +1,19 @@
+
+githubviewer.github_viewer_controller:
+  path: '/githubhistory/{repository_owner}/{repository_name}/{repository_user}'
+  defaults:
+    _controller: '\Drupal\githubviewer\Controller\GithubViewerController::getGithubCommitsByUser'
+    _title: 'Github History'
+    repository_owner: ''
+    repository_name: ''
+    repository_user: ''
+  requirements:
+    _permission: 'access content'
+
+githubviewer.githubviewer_admin_form:
+ path: '/admin/config/system/githubviewer-admin'
+ defaults:
+   _form: 'Drupal\githubviewer\Form\GitHubviewerAdminForm'
+   _title: 'GithubViewer Admin Form'
+ requirements:
+   _permission: 'administer site configuration'

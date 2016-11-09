@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains githubviewer.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function githubviewer_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the githubviewer module.
+    case 'help.page.githubviewer':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Retrieve last commits of specific user and repo from github') . '</p>';
+      $output .= '<p>' . t('Can be used as a drupal block or as a route that returns the data as json') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function githubviewer_theme() {
+  return array(
+    'github_viewer' => array(
+      'variables' => array('commits' => NULL),
+    )
+  );
+}

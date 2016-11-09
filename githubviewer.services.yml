@@ -1,0 +1,9 @@
+services:
+  githubviewer.githubviewerservice:
+    class: Drupal\githubviewer\Service\GithubViewerService
+    #This is only for demonstration, it's not really useful to use a factory here...
+    factory: githubviewer.githubviewerservicefactory:create
+    arguments: ['@http_client', '@config.factory']
+  githubviewer.githubviewerservicefactory:
+    class: Drupal\githubviewer\Service\GithubViewerServiceFactory
+    arguments: ['@http_client', '@config.factory']

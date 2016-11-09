@@ -1,0 +1,5 @@
+name: GithubViewer
+type: module
+description: Demonstration of Drupal 8 Services (Dummycode)
+core: 8.x
+package: Custom

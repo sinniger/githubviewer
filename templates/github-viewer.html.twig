@@ -1,0 +1,6 @@
+
+<ul>
+    {% for item in commits %}
+        <li>{{ item.commit.author.name }} {{ item.commit.author.date|date("d/m/Y")}} <a href="{{ item.commit.url }}">Link</a></li>
+    {% endfor %}
+</ul>
